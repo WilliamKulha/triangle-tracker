@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset = "utf-8">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/scripts.js"></script>
+    <title> Triangle Tracker</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>
+          Triangle Tracker! <br>
+          <small>Find out whether it's a triangle or not</small>
+        </h1>
+      </div>
+      <div class="well">
+        <div class="text-center">
+          <h2>Input
+          <small> the lengths of each side of your triangle below to find out if it's an isosceles, scalene, or equilateral triangle (or whether it's a triangle at all!)</small></h2>
+          <hr>
+        </div>
+        <fieldset>
+          <form id="userInput">
+            <div class="form-group">
+              <label for="side1">Enter the length of the first side:</label>
+              <input type="number" class="form-control" id="side1" placeholder="5">
+            </div>
+            <div class="form-group">
+              <label for="side2">Enter the length of the second side:</label>
+              <input type="number" class="form-control" id="side2" placeholder="5">
+            </div>
+            <div class="form-group">
+              <label for="side3">Enter the length of the third side:</label>
+              <input type="number" class="form-control" id="side3" placeholder="7">
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg">Tell me!</button>
+          </form>
+        </fieldset>
+      </div>
+
+      <div class="well noshow" id="isosceles">
+        <div class="text-center">
+          <h1>Isosceles</h1>
+          <img class="img-fluid" src="img/isosceles.png" alt="A diagram of an isosceles triangle">
+          <p>You've entered side lengths that correspond to an isosceles triangle.</p>
+        </div>
+      </div>
+      <div class="well noshow" id="equilateral">
+        <div class="text-center">
+          <h1>Equilateral</h1>
+          <img class="img-fluid" src="img/equilateral.png" alt="A diagram of an equilateral triangel">
+          <p>You've entered side lengths that correspond to an equilateral triangle.</p>
+        </div>
+      </div>
+      <div class="well noshow" id ="scalene">
+        <div class="text-center">
+          <h1>Scalene</h1>
+          <img class="img-fluid" src="img/scalene.png" alt="A diagaram of a scalene triangle.">
+          <p>You've entered side lengths that correspond to an equilateral triangle.</p>
+        </div>
+      </div>
+      <div class="well noshow" id="NaT">
+        <div class="text-center">
+          <h1>Not a Triangle</h1>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pictogram_voting_question.svg/220px-Pictogram_voting_question.svg.png" alt="A questionmark.">
+          <p>The lengths you've entered don't add up to a triangle. Not sure what it is...but I can tell you one thing--<em>it ain't a triangle</em>!</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
